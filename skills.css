@@ -43,13 +43,30 @@ nav ul li button:hover {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 40px;
+  padding: 60px 40px;
 }
 
-img {
-   width: 300px;
-  height: auto;
-  object-fit: cover;
+.skills h2 {
+  margin-bottom: 15px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.skills-text ul{
+   text-align: left;
+    margin-top: 15px;
+}
+
+.skills img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
 }
 
 footer {
