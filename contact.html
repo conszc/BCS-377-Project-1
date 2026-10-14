@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Zephan Constantine</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <header>
         <nav>
             <h1>Contact Me</h1>
-        <ul>
-            <li><a href="index.html"><button>Home</button></a></li> 
-            <li><a href="skills.html"><button>Skills</button></a></li> 
-            <li><a href="Career Sim 1 Video.mp4"><button>Projects</button></a></li> 
-            <li><a href="Zephan Resume (graded).docx"><button>Resume</button></a></li> 
-            <li><a href="contact.html"><button>Contact</button></a></li>
+             <button id="menuToggle"
+                    aria-expanded="false"
+                    aria-controls="navLinks">
+                Menu ☰
+            </button>
+
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="skills.html">Skills</a></li> 
+            <li><a href="https://drive.google.com/file/d/1P2SBAgJYj5-uGYhO3I9SZgUoM3FoU3tw/view?usp=share_link">Projects</a></li> 
+            <li><a href="Resume.docx">Resume</a></li> 
+            <li><a href="contact.html">Contact</a></li>
             </ul>
+              <button id="themeToggle">Dark Mode</button>
         </nav>
     </header>
 
@@ -29,7 +37,7 @@
                 <li>Email: <a href="mailto:zephanconstantine@gmail.com">zephanconstantine@gmail.com</a></li>
             </ul>
 
-            <form action="https://formspree.io/f/your-form-id" method="POST">
+            <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
