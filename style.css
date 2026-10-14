@@ -1,3 +1,347 @@
+/* =========================
+   1. GLOBAL STYLES & RESET
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #f5efe6;
+  color: #333333;
+  line-height: 1.6;
+}
+
+body.dark-mode {
+  background-color: #1a1612;
+  color: #f5efe6;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #261f18;
+}
+
+/* =========================
+   2. HEADER & NAVIGATION
+   ========================= */
+header {
+  background-color: #3b3025;
+}
+
+nav {
+  color: #c9a227;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+nav h1, nav h2 {
+  font-size: 24px;
+  color: #c9a227;
+}
+
+/* Mobile Menu Toggle Button (Hidden by default on desktop) */
+#menuToggle {
+  display: none;
+  background: transparent;
+  border: 1px solid #c9a227;
+  color: #c9a227;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* Nav Links List */
+#navLinks {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+}
+
+#navLinks li a {
+  color: #c9a227;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#navLinks li a:hover {
+  color: #d4af37;
+}
+
+#themeToggle {
+  background: transparent;
+  border: 1px solid #c9a227;
+  color: #c9a227;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 4px;
+}
+
+#themeToggle:hover {
+  background-color: #c9a227;
+  color: #3b3025;
+}
+
+/* =========================
+   3. MAIN LAYOUT & PAGES
+   ========================= */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  min-height: calc(100vh - 220px);
+}
+
+/* Home / About Me Page Layout */
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.about-me-text {
+  flex: 1;
+}
+
+.about-me-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #3b3025;
+}
+
+body.dark-mode .about-me-text h1 {
+  color: #c9a227;
+}
+
+.profile-image, .skills-container img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Skills Page Layout */
+.skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.skills-text {
+  flex: 1;
+}
+
+.skills-text h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #3b3025;
+}
+
+body.dark-mode .skills-text h2 {
+  color: #c9a227;
+}
+
+.skill-toggle {
+  background-color: #3b3025;
+  color: #c9a227;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-family: inherit;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.skills-text ul {
+  list-style-position: inside;
+  margin-top: 10px;
+}
+
+.skills-text ul li {
+  margin-bottom: 8px;
+}
+
+/* Contact Page Layout */
+.contact-info h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #3b3025;
+}
+
+body.dark-mode .contact-info h2 {
+  color: #c9a227;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.contact-info a {
+  color: #3b3025;
+}
+
+body.dark-mode .contact-info a {
+  color: #c9a227;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 15px;
+}
+
+#contactForm label {
+  font-weight: bold;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 10px;
+  border: 1px solid #c9a227;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  border-radius: 4px;
+}
+
+#contactForm button[type="submit"] {
+  background-color: #3b3025;
+  color: #c9a227;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+#contactForm button[type="submit"]:hover {
+  background-color: #c9a227;
+  color: #3b3025;
+}
+
+/* =========================
+   4. FOOTER
+   ========================= */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a227;
+  background-color: #3b3025;
+  min-height: 100px;
+  padding: 20px;
+}
+
+footer button {
+  background: transparent;
+  border: 1px solid #c9a227;
+  color: #c9a227;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 4px;
+}
+
+footer button:hover {
+  background-color: #c9a227;
+  color: #3b3025;
+}
+
+/* =========================
+   5. MOBILE RESPONSIVENESS
+   ========================= */
+@media (max-width: 768px) {
+  #menuToggle {
+    display: block;
+  }
+
+  #navLinks {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 20px;
+  }
+
+  #navLinks.show {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 5%;
+  }
+
+  #themeToggle {
+    margin-top: 15px;
+  }
+
+  .about-me, .skills-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .skills-text ul {
+    list-style-position: inside;
+  }
+
+  main {
+    padding: 40px 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  
 * {
  margin: 0;
  padding: 0;
@@ -34,24 +378,12 @@ nav h2 {
  color: #c9a227;
 }
 
-/* Desktop view for navigation links */
+
+
+
 #navLinks {
   display: none;
-  flex-direction: column;
-  gap: 10px;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  background-color: #3b3025;
-  padding: 20px;
-  /*
- display: flex;
- list-style: none;
- flex-direction: row;
- gap: 30px;
- align-items: center;
- */
+ 
 }
 
 #navLinks a {
@@ -71,7 +403,20 @@ nav h2 {
   color: #3b3025;
 }
 
-/* Mobile dropdown view */
+
+
+@media (min-width: 769px) {
+  #navLinks {
+    display: flex !important;
+    flex-direction: row;
+  }
+  
+  #menuToggle{
+    display: none;
+  }
+
+}
+
 @media screen and (max-width: 768px) {
   #navLinks {
     display: block;
@@ -87,6 +432,7 @@ nav h2 {
 
   #navLinks.show {
     display: flex;
+    flex-direction: column;
   }
 }
 
@@ -120,7 +466,7 @@ main {
  padding: 100px 40px;
 }
 
-/* About Me (Index Page) */
+
 .about-me {
  display: flex;
  justify-content: space-between;
@@ -153,7 +499,7 @@ main {
  object-fit: cover;
 }
 
-/* Skills Page */
+
 .skills-container {
    display: flex;
    align-items: center;
@@ -189,7 +535,8 @@ main {
    flex: 1;
 }
 
-/* Contact Page */
+
+
 .contact-container {
    max-width: 600px;
    margin: 30px auto;
@@ -223,3 +570,4 @@ footer {
  background-color: #3b3025;
  min-height: 100px;
 }
+*/
