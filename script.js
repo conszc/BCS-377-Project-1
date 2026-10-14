@@ -34,6 +34,13 @@ if (menuButton && navLinks) {
         const isOpen = navLinks.classList.contains("show");
         menuButton.setAttribute("aria-expanded", isOpen);
     });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+            navigation.classList.remove("show");
+            menuButton.setAttribute("aria-expanded", "false");
+        }
+    });
 }
 
 /* =========================
